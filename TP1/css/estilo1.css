@@ -39,7 +39,7 @@ h4 {
 
 @keyframes cambiarColor {
     0% {background: rgb(252, 255, 47); height: 0%;}        
-    50% {background: rgb(219, 187, 6); height: 50%;}     
+    50% {background: red; height: 50%;}     
     100% {background: orange; height: 95%;}
 }
 
