@@ -7,12 +7,12 @@ body {
 h1 {
     color:black;
     font-family: "Dancing Script", cursive;
-    font-size: 24px;
+    font-size: 32px;
 }
 
 h2 {
     color:red;
-    font-size: 24px;
+    font-size: 32px;
 }
 p {
     font-size:x-large;
@@ -62,7 +62,7 @@ h4 {
 
 .grid-container {
     display: grid;
-    grid-template: 400px 1fr 400px / 120px 1fr 120px;
+    grid-template: 300px 1fr 300px / 120px 1fr 120px;
     grid-template-areas: 
         'header header header' 
         'left main right'
