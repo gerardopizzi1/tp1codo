@@ -27,8 +27,8 @@ h4 {
 }
 
 .item2 {
-    width: 100px;
-    height: 5000px;
+    width: 50px;
+    height: 95%;
     color:red;
     animation-name: cambiarColor;
     animation-duration: 20s;
@@ -45,9 +45,8 @@ h4 {
 
 
 .item4 {
-    width: 100px;
-    height:95%;
-    color:red;
+    width: 120px;
+    height:96%;
     padding:10px;
     border-color: black;
     border-style: solid;
@@ -62,7 +61,7 @@ h4 {
 
 .grid-container {
     display: grid;
-    grid-template: 200px 1fr 200px / 120px 1fr 120px;
+    grid-template: 200px 1fr 200px / 20px 1fr 140px;
     grid-template-areas: 
         'header header header' 
         'left main right'
