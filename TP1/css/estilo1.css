@@ -62,7 +62,7 @@ h4 {
 
 .grid-container {
     display: grid;
-    grid-template: 400px 1fr 400px / 120px 1fr 120px;
+    grid-template: 500px 1fr 500px / 120px 1fr 120px;
     grid-template-areas: 
         'header header header' 
         'left main right'
