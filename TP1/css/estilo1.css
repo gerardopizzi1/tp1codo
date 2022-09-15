@@ -48,9 +48,6 @@ h4 {
     width:100%;
     height:95%;
     padding:2%;
-    border-color: black;
-    border-style: solid;
-   
 }
 
 .item1 {grid-area: header;}
