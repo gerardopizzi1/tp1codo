@@ -27,14 +27,13 @@ h4 {
 }
 
 .item2 {
-    width:5%;
+    width:2%;
     height:95%;
     color:red;
     animation-name: cambiarColor;
     animation-duration: 20s;
     animation-timing-function: ease;
     animation-iteration-count: infinite;
-    padding:2%;
 }
 
 @keyframes cambiarColor {
@@ -45,9 +44,8 @@ h4 {
 
 
 .item4 {
-    width:100%;
+    width:90%;
     height:95%;
-    padding:2%;
 }
 
 .item1 {grid-area: header;}
@@ -58,15 +56,13 @@ h4 {
 
 .grid-container {
     display: grid;
-    grid-template: 200px 1fr 200px / 2% 1fr 10%;
+    grid-template: 200px 1fr 200px / 2% 1fr 20%;
     grid-template-areas: 
         'header header header' 
         'left main right'
         'footer footer footer';
     grid-gap: 10px;
     background-color:rgb(252, 255, 47);
-    padding: 2%;
-    
 }
 
 .grid-container>div {
