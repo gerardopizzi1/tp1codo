@@ -7,7 +7,7 @@ body {
 h1 {
     color:black;
     font-family: "Dancing Script", cursive;
-    font-size: 32px;
+    font-size: 1.5em;
 }
 
 h2 {
@@ -26,9 +26,14 @@ h4 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.item1{
+    width: auto;
+    height: auto;
+}
+
 .item2 {
     width:2%;
-    height:95%;
+    height:100%;
     color:red;
     animation-name: cambiarColor;
     animation-duration: 20s;
@@ -37,17 +42,20 @@ h4 {
 }
 
 @keyframes cambiarColor {
-    0% {background: rgb(252, 255, 47); height: 0%;}        
+    0% {background: rgb(245, 165, 18); height: 0%;}        
     50% {background: red; height: 50%;}     
-    100% {background: rgb(252, 255, 47); height: 95%;}
+    100% {background: rgb(245, 7, 154); height: 95%;}
 }
 
 
+
 .item4 {
-    width:90%;
-    height:90%;
+    width:auto;
+    height:auto;
     border-color: black;
     border-style: solid;
+    margin: 10%;
+    justify-content: space-between;
 }
 
 .item1 {grid-area: header;}
@@ -56,16 +64,18 @@ h4 {
 .item4 {grid-area: right;}
 .item5 {grid-area: footer;}
 
-    
-.grid-container {
+
+
+.grid-container 
+{
     display: grid;
-    grid-template: 10% 1fr 30% / 2% 1fr 20%;
-    grid-template-areas: 
-        'header header header' 
+    grid-template: 5% 60% 30% / 2% 70% 28%;
+        grid-template-areas:
+        'header header header'
         'left main right'
         'footer footer footer';
     grid-gap: 10px;
-    background-color:rgb(252, 255, 47);
+    
 }
 
 .grid-container>div {
@@ -74,3 +84,47 @@ h4 {
     padding: 10px;
     font-size: 24px;
 }
+
+
+@media only screen and (max-width: 1000px) 
+    {.grid-container {
+    grid-template: 2% 1fr 1fr 45% / 5% 95%;
+    grid-template-areas: 
+        'header header' 
+        'left main'
+        'left right'
+        'footer footer';
+    grid-gap: 10px;
+
+}}
+
+@media only screen and (max-width: 800px) 
+{.item3 {font-style: oblique; color:red;
+        font-size: 0.5EM;
+        }
+.grid-container {
+    grid-template: 1.5% 1fr 1fr 40% / 5% 95%;
+    grid-template-areas: 
+        'header header' 
+        'left main'
+        'left right'
+        'footer footer';
+    grid-gap: 10px;
+    }}
+
+
+
+@media only screen and (max-width: 600px) 
+{.item3 {font-weight: bold; color:blue;
+        font-size: 0.5EM;}
+.grid-container {
+    grid-template: 2% 1fr 1fr 40% / 5% 95%;
+    grid-template-areas: 
+        'header header' 
+        'left main'
+        'left right'
+        'footer footer';
+    grid-gap: 10px;
+    
+}}
+
