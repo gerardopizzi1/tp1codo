@@ -100,8 +100,7 @@ h4 {
 
 @media only screen and (max-width: 800px) 
 {.item3 {font-style: oblique; color:red;
-        font-size: 0.5EM;
-        }
+        font-size: xx-small;}
 .grid-container {
     grid-template: 1.5% 1fr 1fr 40% / 5% 95%;
     grid-template-areas: 
@@ -116,7 +115,7 @@ h4 {
 
 @media only screen and (max-width: 600px) 
 {.item3 {font-weight: bold; color:blue;
-        font-size: 0.5EM;}
+        font-size: xx-small;}
 .grid-container {
     grid-template: 2% 1fr 1fr 40% / 5% 95%;
     grid-template-areas: 
