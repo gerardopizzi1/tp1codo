@@ -118,7 +118,7 @@ h4 {
 {.item3 {font-weight: bold; color:blue;
         font-size: xx-small;}
 .grid-container {
-    grid-template: 2% 1fr 1fr 40% / 5% 95%;
+    grid-template: 3% 1fr 1fr 40% / 5% 95%;
     grid-template-areas: 
         'header header' 
         'left main'
