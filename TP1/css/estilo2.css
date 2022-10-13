@@ -25,3 +25,12 @@ h4 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+button {
+    font-size: 24px;
+    color: BLACK;
+    background-color:rgb(25, 236, 106);
+    border-radius: 5px;
+    border: 2px solid #303030;
+    padding: 10px;
+    margin: 6px
+}
