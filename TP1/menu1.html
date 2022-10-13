@@ -11,6 +11,8 @@
 
     <script src="https://kit.fontawesome.com/3ebd9fb648.js" crossorigin="anonymous"></script>
 
+    <script src="https://unpkg.com/vue@next"></script>
+
 </head>
 
 <body align="center">
@@ -29,7 +31,7 @@
 
     </nav>
 
-    <h1><i>Entradas  </i> <i class="fa-solid fa-bowl-food fa-1x"></i></h1>
+    <h1><i>Entradas</i> <i class="fa-solid fa-bowl-food fa-1x"></i></h1>
 
     <dl>
             
@@ -56,36 +58,36 @@
 
     </dl>
     
-    <h1><i>Platos Principales </i> <i class="fa-solid fa-utensils fa-1x"></i></h1>
+    <h1><i>Platos Principales</i> <i class="fa-solid fa-utensils fa-1x"></i></h1>
     
     
 
     <dl>
             
         <dl>
-        <h2><b>Napoli</b></h2>
-            <dt>Milanesa de bife de chorizo, acompañada de morrones asados, cebollas ahumadas, puré de papas.</dt>
+        <h2><b>1.Napoli</b></h2>
+        <dt>Milanesa de pollo con salteado de verduras y ensalada mixta.</dt>
         </dl>
            
         <dl>
-        <h2><b>Lourdes</b></h2>
-            <dt>Lomo con Mix de hojas verdes, queso de yogurt griego, papas noisette y frutos secos.<dt>
+        <h2><b>2.Lourdes</b></h2>
+        <dt>Solomillo relleno con papas noisette y verduras a la provenzal.<dt>
         </dl>
 
         <dl>
-        <h2><b>Listaú</b></h2>
-            <dt>Salmón grillado acompañado de vegetales braseados y puré de manzana.</dt>
+        <h2><b>3.Listaú</b></h2>
+        <dt>Salmón grillado con puré de batatas y salteado de hinojos con tomates cherry.</dt>
         </dl>
                
         <dl>
-        <h2><b>Lombardía</b></h2>
-            <dt>Risotto acompañado de jamón crudo de jabalí.<dt>
+        <h2><b>4.Lombardía</b></h2>
+        <dt>Risotto acompañado de jamón crudo de jabalí.<dt>
         </dl>
         
         
     </dl>
 
-    <h1><i>Carta de Vinos  </i><i class="fa-solid fa-bottle-droplet fa-1x"></i></h1>
+    <h1><i>Carta de Vinos</i> <i class="fa-solid fa-bottle-droplet fa-1x"></i></h1>
     
     <dl>
             
@@ -112,6 +114,59 @@
             <dt>Golan Heights Winery Cabernet Sauvignon Galilee Yarden</dt><br>
             <dt>Chateau Lamartine Malbec Cahors</dt><br>
         </dl>
+
+        <h1><i>Ver Platos Principales</i></h1>
+
+        <div id="app">
+            <div class="container">
+            <br>
+            <button type="button" v-on:click="cambiarImagen">{{textoBoton}}</button><br><br><br>
+            
+            <img v-bind:src="imagen" v-bind:title="titulo" v-bind:height="alto" v-bind:class="clase" alt="No encontré la imágen!" >
+            </div>
+        </div>
+    
+        
+        <script>
+           
+            const {createApp} = Vue
+            createApp({
+                data() {
+                    return {
+                        titulo: "",                            
+                        indice: 1,                             
+                        imagen: "img/Plato" + this.indice + ".jpg",
+                        ultimaImagen: 4,
+                        textoBoton: "Cambiar imagen",                 
+                        alto: 300,                            
+                    }
+                },
+                
+                mounted() {
+                    this.imagen = "img/Plato" + this.indice + ".jpg"     
+                    this.titulo = "Foto: " + this.imagen  // Texto del tooltip
+                },
+                
+                methods: {
+                    cambiarImagen() {
+                       
+                        if (this.indice < this.ultimaImagen) {
+                            this.indice++   
+                        } else {
+                            this.indice = 1  
+                        }
+                        this.imagen = "img/Plato" + this.indice + ".jpg"   
+                        this.titulo = "Foto: " + this.imagen 
+                    }
+                    
+                }
+            }).mount('#app')
+            
+    
+        </script>
+    
+
+
 
           
 </body>
