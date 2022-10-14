@@ -9,6 +9,7 @@ si luego se achica mas la pantalla a menos de 600 px la letra cambia a color neg
 En el Título de la Página Inicio Restaurant "Los Amigos" se utilizó un tipo de Letra de Google Fonts.
 Los Iconos de las Páginas Menú 1 y Menú 2 que ilustran las opciones son de Fonts Awesome.
 En el body se coloco un iframe de Google Maps. 
-En la página Menú 1 se colocaron Imagenes de los Platos Principales con Vue y presionando el botón cambian las imágenes.
+En la página Menú 1 se colocaron Imágenes de los diferentes Platos Principales con Vue y presionando el botón cambian las imágenes.
+En la página Menú 2 se colocaron Imágenes de los diferentes Postres con Vue y presionando el botón cambian las imágenes.
 En la página del Formulario cuando se presiona el boton Enviar se muestran los datos enviados.
 */
