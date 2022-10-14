@@ -130,7 +130,7 @@
         <script>
            
             const {createApp} = Vue
-            createApp({
+            const miApp = createApp({
                 data() {
                     return {
                         titulo: "",                            
@@ -144,7 +144,7 @@
                 
                 mounted() {
                     this.imagen = "img/Plato" + this.indice + ".jpg"     
-                    this.titulo = "Foto: " + this.imagen  // Texto del tooltip
+                    this.titulo = "Foto: " + this.imagen  
                 },
                 
                 methods: {

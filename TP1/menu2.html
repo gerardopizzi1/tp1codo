@@ -34,35 +34,35 @@
 
     <dl><h1><i>Postres  </i><i class="fa-solid fa-cheese"></i></h1>
         
-        <dl><h2><b>Reino Unido</b></h2>
+        <dl><h2><b>1.Reino Unido</b></h2>
             <dt>Crumble de manzanas - Crema de mascarpone.</dt>
         </dl>
            
         <dl>
-        <h2><b>Caribe</b></h2>
+        <h2><b>2.Caribe</b></h2>
             <dt>Mousse de chocolate-manjar de coco.<dt>
         </dl>
 
         <dl>
-        <h2><b>Tiramisú Véneto</b></h2>
+        <h2><b>3.Tiramisú Véneto</b></h2>
             <dt>Tiramisú con queso mascarpone y chocolate</dt>
         </dl>
                
         <dl>
-        <h2><b>Helado Mix</b></h2>
-            <dt>Bochas de Chocolate y Crema Americana con Frutos Rojos.<dt>
+        <h2><b>4.Helado Mix</b></h2>
+            <dt>Bochas de Chocolate, Frutilla y Crema Americana con Cerezas.<dt>
         </dl>
 
         <dl>
-        <h2><b>Cheesecake New York</b></h2>
+        <h2><b>5.Cheesecake New York</b></h2>
             <dt>Tarta de Queso Crema con Arándanos y Frutillas.<dt>
         </dl>
 
         <dl>
-        <h2><b>Cheesecake Philadelphia</b></h2>
+        <h2><b>6.Cheesecake Philadelphia</b></h2>
             <dt>Tarta de Queso Crema, Mouse y Chocolate.<dt>
         </dl>
-
+        <br>
     </dl>
 
         
@@ -77,7 +77,7 @@
             <dt>Agua Mineral con Gas</dt><br>
             <dt>Agua Mineral sin Gas</dt><br>
     </dl>
-
+    
     <dl><h1><i>Cafetería  </i><i class="fa-solid fa-mug-saucer fa-1x"></i></h1>
             <dt>Expreso Chico</dt><br>
             <dt>Expreso Grande</dt><br>
@@ -90,7 +90,63 @@
             <dt>Cortado Chico</dt><br>
             <dt>Cortado Grande</dt><br>
     </dl>
+    
+
+    <h1><i>Ver Postres</i></h1>
+
+<div id="app">
+    <div class="container">
+   
+    <button type="button" v-on:click="cambiarImagen">{{textoBoton}}</button><br><br><br>
+    
+    <img v-bind:src="imagen" v-bind:title="titulo" v-bind:height="alto" v-bind:class="clase" alt="No encontré la imágen!" >
+    </div>
+</div>
+
+
+<script>
+
+
+   
+    const {createApp} = Vue
+    const miApp = createApp({
+        data() {
+            return {
+                titulo: "",                            
+                indice: 1,                             
+                imagen: "img/Postre" + this.indice + ".jpg", 
+                ultimaImagen: 6,                       
+                textoBoton: "Cambiar imagen",
+                alto:300, 
+            }
+        },
+       
+        mounted() {
+            
+            this.imagen = "img/Postre" + this.indice + ".jpg"     // Ruta y nombre de la foto
+            this.titulo = "Foto: " + this.imagen  // Texto del tooltip
+
+        },
+        // Defino metodos:
+
+        methods: {
+                    cambiarImagen() {
+                       
+                        if (this.indice < this.ultimaImagen) {
+                            this.indice++   
+                        } else {
+                            this.indice = 1  
+                        }
+                        this.imagen = "img/Postre" + this.indice + ".jpg"   
+                        this.titulo = "Foto: " + this.imagen 
+                    }
+                    
+                }
+
         
+    }).mount('#app')
+
+</script>
 
 </body>
 
