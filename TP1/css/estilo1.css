@@ -25,6 +25,7 @@ h3 {font-size: 24px;
 
 h4 {
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
 .item1{
@@ -115,7 +116,7 @@ h4 {
 
 
 @media only screen and (max-width: 600px) 
-{.item3 {font-weight: bold; color:blue;
+{.item3 {font-weight: bold; color:black;
         font-size: xx-small;}
 .grid-container {
     grid-template: 3% 1fr 1fr 40% / 5% 95%;
