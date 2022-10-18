@@ -11,8 +11,7 @@
     
     <script src="https://kit.fontawesome.com/3ebd9fb648.js" crossorigin="anonymous"></script>
 
-    <script src="https://unpkg.com/vue@next"></script>
-
+    
 </head>
 
 <body align="center">
@@ -94,7 +93,7 @@
 
     <h1><i>Ver Postres</i></h1>
 
-<div id="app">
+<div id="app2">
     <div class="container">
    
     <button type="button" v-on:click="cambiarImagen">{{textoBoton}}</button><br><br><br>
@@ -104,49 +103,10 @@
 </div>
 
 
-<script>
+<script src="https://unpkg.com/vue@next"></script>
 
+<script src="js/vue.js"></script>
 
-   
-    const {createApp} = Vue
-    const miApp = createApp({
-        data() {
-            return {
-                titulo: "",                            
-                indice: 1,                             
-                imagen: "img/Postre" + this.indice + ".jpg", 
-                ultimaImagen: 6,                       
-                textoBoton: "Cambiar imagen",
-                alto:300, 
-            }
-        },
-       
-        mounted() {
-            
-            this.imagen = "img/Postre" + this.indice + ".jpg"     // Ruta y nombre de la foto
-            this.titulo = "Foto: " + this.imagen  // Texto del tooltip
-
-        },
-        // Defino metodos:
-
-        methods: {
-                    cambiarImagen() {
-                       
-                        if (this.indice < this.ultimaImagen) {
-                            this.indice++   
-                        } else {
-                            this.indice = 1  
-                        }
-                        this.imagen = "img/Postre" + this.indice + ".jpg"   
-                        this.titulo = "Foto: " + this.imagen 
-                    }
-                    
-                }
-
-        
-    }).mount('#app')
-
-</script>
 
 </body>
 

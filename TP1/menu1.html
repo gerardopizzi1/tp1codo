@@ -11,8 +11,7 @@
 
     <script src="https://kit.fontawesome.com/3ebd9fb648.js" crossorigin="anonymous"></script>
 
-    <script src="https://unpkg.com/vue@next"></script>
-
+    
 </head>
 
 <body align="center">
@@ -117,7 +116,7 @@
 
         <h1><i>Ver Platos Principales</i></h1>
 
-        <div id="app">
+        <div id="app1">
             <div class="container">
             <br>
             <button type="button" v-on:click="cambiarImagen">{{textoBoton}}</button><br><br><br>
@@ -125,50 +124,13 @@
             <img v-bind:src="imagen" v-bind:title="titulo" v-bind:height="alto" v-bind:class="clase" alt="No encontré la imágen!" >
             </div>
         </div>
-    
         
-        <script>
-           
-            const {createApp} = Vue
-            const miApp = createApp({
-                data() {
-                    return {
-                        titulo: "",                            
-                        indice: 1,                             
-                        imagen: "img/Plato" + this.indice + ".jpg",
-                        ultimaImagen: 4,
-                        textoBoton: "Cambiar imagen",                 
-                        alto: 300,                            
-                    }
-                },
-                
-                mounted() {
-                    this.imagen = "img/Plato" + this.indice + ".jpg"     
-                    this.titulo = "Foto: " + this.imagen  
-                },
-                
-                methods: {
-                    cambiarImagen() {
-                       
-                        if (this.indice < this.ultimaImagen) {
-                            this.indice++   
-                        } else {
-                            this.indice = 1  
-                        }
-                        this.imagen = "img/Plato" + this.indice + ".jpg"   
-                        this.titulo = "Foto: " + this.imagen 
-                    }
-                    
-                }
-            }).mount('#app')
-            
     
-        </script>
-    
-    
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <script src="js/vue.js"></script>
 
 
-          
 </body>
 
 <footer align="center">
