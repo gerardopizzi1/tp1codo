@@ -6,7 +6,7 @@
                 titulo: "",                            
                 indice: 1,                             
                 imagen: "img/Plato" + this.indice + ".jpg",
-                ultimaImagen: 4,
+                ultimaImagen: 6,
                 textoBoton: "Cambiar imagen",                 
                 alto: 300,                            
             }
